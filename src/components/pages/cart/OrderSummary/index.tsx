@@ -44,7 +44,7 @@ const OrderSummary = () => {
                         </p>
                     </div>
                 </div>
-                <div className='flex justify-between md:justify-end lg:justify-between items-center md:mt-4 bg-neutral-100 p-3 md:p-0 rounded-b-xl'>
+                <div className='flex justify-between md:justify-end lg:justify-between items-center md:mt-4 bg-neutral-100 md:bg-transparent p-3 md:p-0 rounded-b-xl'>
                     <p className='text-sm text-neutral-500 hidden lg:block'>
                         Order Total
                     </p>

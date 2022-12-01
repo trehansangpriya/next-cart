@@ -101,24 +101,26 @@ const DeliveryAvailability = () => {
                     }}
                 >Change</Button>
             </div>
-            {deliveryTexts.length > 1 ? (
-                <div className='flex justify-between gap-6 py-2'>
-                    {
-                        deliveryTexts.map((item, index) => (
-                            <div key={index} className='flex flex-col items-center lg:items-start lg:flex-row gap-1'>
-                                <img className='w-6 h-6' src={`/icon/${item.status}.png`} alt={`${item.status} Icon`} />
-                                <span className='text-sm leading-6 text-center lg:text-left'>{item.text}</span>
-                            </div>
-                        ))}
-                </div>
-            ) : (
-                <div className='flex gap-6 py-2'>
-                    <div className='flex items-center lg:items-center lg:flex-row gap-1'>
-                        <img className='w-6 h-6' src={`/icon/${deliveryTexts[0]?.status}.png`} alt={`${deliveryTexts[0]?.status} Icon`} />
-                        <span className='text-sm leading-6'>{deliveryTexts[0]?.text}</span>
+            {
+                deliveryTexts.length > 1 ? (
+                    <div className='flex justify-between gap-6 py-2'>
+                        {
+                            deliveryTexts.map((item, index) => (
+                                <div key={index} className='flex flex-col items-center lg:items-start lg:flex-row gap-1'>
+                                    <img className='w-6 h-6' src={`/icon/${item.status}.png`} alt={`${item.status} Icon`} />
+                                    <span className='text-sm leading-6 text-center lg:text-left'>{item.text}</span>
+                                </div>
+                            ))}
                     </div>
-                </div>
-            )}
+                ) : deliveryTexts.length === 1 ? (
+                    <div className='flex gap-6 py-2'>
+                        <div className='flex items-center lg:items-center lg:flex-row gap-1'>
+                            <img className='w-6 h-6' src={`/icon/${deliveryTexts[0]?.status}.png`} alt={`${deliveryTexts[0]?.status} Icon`} />
+                            <span className='text-sm leading-6'>{deliveryTexts[0]?.text}</span>
+                        </div>
+                    </div>
+                ) : null
+            }
         </div>
     )
 }
