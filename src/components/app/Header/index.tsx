@@ -23,7 +23,7 @@ const Header = ({
                     </span>
                     {
                         navbarIcons.map((icon, index) => (
-                            <div className='flex items-center'>
+                            <div key={index} className='flex items-center'>
                                 <span className={[
                                     "mx-1 md:mx-3 text-neutral-400",
                                     index === 0 ? "hidden md:block" : ""

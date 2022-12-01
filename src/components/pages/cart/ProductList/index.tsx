@@ -12,10 +12,10 @@ const ProductList = () => {
                 <div className="w-1/6  flex justify-center items-center">Quantity</div>
                 <div className="w-1/6 flex justify-center items-center">Subtotal</div>
             </div>
-            <div className='bg-neutral-100 rounded-lg border border-neutral-200'>
+            <div className='bg-neutral-100 md:bg-transparent rounded-lg border border-neutral-200 md:border-none'>
                 {cart.map((product, index) => (
-                    <div>
-                        <ProductListItem key={product.id}
+                    <div key={index}>
+                        <ProductListItem
                             id={product.id}
                             tagline={product.tagline}
                             name={product.name}

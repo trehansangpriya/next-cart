@@ -52,7 +52,7 @@ const DeliveryAvailability = () => {
                     setIsDeliveryAvailable(false)
                     setDeliveryTexts([
                         {
-                            text: 'Delivery not available',
+                            text: 'No Delivery',
                             status: 'cross'
                         }
                     ])
@@ -61,6 +61,7 @@ const DeliveryAvailability = () => {
             }
             if (pincode.length < 6 || !validator.isNumeric(pincode)) {
                 // set deliveryTexts
+                setIsDeliveryAvailable(false)
                 setDeliveryTexts((texts) => [{
                     text: 'Please enter a valid pincode',
                     status: 'cross'

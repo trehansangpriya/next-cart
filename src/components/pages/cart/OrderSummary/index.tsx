@@ -25,14 +25,18 @@ const OrderSummary = () => {
                             {subTotal} $
                         </p>
                     </div>
-                    <div className='flex justify-between'>
-                        <p>
-                            Total Discount
-                        </p>
-                        <p>
-                            -{totalDiscount} $
-                        </p>
-                    </div>
+                    {
+                        totalDiscount > 0 && (
+                            <div className='flex justify-between'>
+                                <p>
+                                    Total Discount
+                                </p>
+                                <p>
+                                    -{totalDiscount} $
+                                </p>
+                            </div>
+                        )
+                    }
                     <div className='flex justify-between'>
                         <p>
                             Standard Shipping
@@ -40,7 +44,7 @@ const OrderSummary = () => {
                         <p>
                             {isDeliveryAvailable ?
                                 deliveryPrice === 0 ? 'Free' : `${deliveryPrice} $`
-                                : 'Delivery Not Available'}
+                                : 'No Delivery'}
                         </p>
                     </div>
                 </div>
@@ -70,6 +74,7 @@ const OrderSummary = () => {
                         className='w-full'
                         variant='primary'
                         onClick={() => console.log('Proceed to Checkout')}
+                        disabled={cartCount === 0 || !isDeliveryAvailable}
                     >
                         Checkout
                     </Button>

@@ -70,6 +70,8 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         // Calculate total discount
         if (subTotal >= data.discount.minTotal) {
             setTotalDiscount(subTotal * (data.discount.discountPercentage / 100))
+        } else {
+            setTotalDiscount(0)
         }
     }, [subTotal])
 

@@ -17,7 +17,6 @@ const ProductListItem = ({
 }: Product) => {
     const { removeFromCart, increaseQuantity, decreaseQuantity } = useCart()
     const [screenSize, setScreenSize] = useState('lg')
-    console.log(screenSize)
 
     useEffect(() => {
         const handleResize = () => {
