@@ -83,7 +83,7 @@ const ProductListItem = ({
                     <Button variant="icon" className="w-6 h-6 ml-4"
                         onClick={() => removeFromCart(id)}
                     >
-                        <img src="/icon/delete.png" alt="Delete" />
+                        <img src="/icon/DELETE.png" alt="Delete" />
                     </Button>
                 </div>
             </div>

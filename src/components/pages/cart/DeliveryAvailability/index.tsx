@@ -83,7 +83,7 @@ const DeliveryAvailability = () => {
                 Delivery Availability
             </p>
             <div className='flex items-center border-b border-b-darkgray py-1'>
-                <img src="/icon/location.png" alt="Location" className='w-7 h-7' />
+                <img src="/icon/LOCATION.png" alt="Location" className='w-7 h-7' />
                 <input className='w-full px-2 border-none outline-none'
                     type="text"
                     placeholder='110003'
