@@ -1,0 +1,14 @@
+[
+    {
+        "name": "search",
+        "src": "/icon/search.png"
+    },
+    {
+        "name": "user",
+        "src": "/icon/user.png"
+    },
+    {
+        "name": "shopping",
+        "src": "/icon/shopping.png"
+    }
+]
